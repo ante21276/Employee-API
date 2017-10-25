@@ -79,6 +79,10 @@ img {
   right:0;
   bottom:0;
 }
+#overlay img {
+  width: 120px;
+}
+
 .right{
   z-index: 201;
   position: absolute;
