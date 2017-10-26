@@ -22,7 +22,7 @@
   }
 
   $.ajax({ //Get data
-    url: 'https://randomuser.me/api/?page=3&results=12&seed=abc',
+    url: 'https://randomuser.me/api/?results=5000',
     dataType: 'json',
     success: function(data) {
         console.log(data.results)
@@ -105,7 +105,7 @@
         let dan = new Date(data.results[employeeNumber].dob);//Get date
         employeeNumber += 1;
 
-        if(employeeNumber === data.results.length ) {
+        if(employeeNumber === 12 ) {
           employeeNumber = 0;
         }
         dan = new Date(data.results[employeeNumber].dob);
