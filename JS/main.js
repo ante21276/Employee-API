@@ -144,8 +144,8 @@
   function searchEmployees () { //Search for employee
       let employees = document.querySelectorAll(".employee");
 
-      $( "#searchField" ).keyup(function() { //Key up functions to filter employees
-          let bla = $('#searchField').val();
+      $(document).on('keyup','#searchField', function() { //Key up functions to filter employees
+          let bla = $('#searchField').val().toLowerCase();
 
           for(let i = 0; i < employees.length; i++) {
               if((employees[i].children[1].children[0].textContent).indexOf(bla) < 0 ) {
